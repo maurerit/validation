@@ -231,7 +231,7 @@ public final class Validation
 	 */
 	public Validation notNull ( Object theObject, String parameterName ) {
 		if ( theObject == null ) {
-			return failedCheck(parameterName, theObject, parameterName + " can not be null!");
+			return failedCheck(parameterName, null, parameterName + " can not be null!");
 		}
 		else {
 			return this;
@@ -366,13 +366,13 @@ public final class Validation
 	 * @throws MultiParameterException
 	 *             If 2 or more calls to any of the methods were called that caused validation problems.
 	 */
-	public Validation check ( ) throws ParameterException, MultiParameterException {
+	public Validation check ( ) {
 		if ( this.exceptions.isEmpty() ) {
 			return this;
 		}
 		else {
 			if ( this.exceptions.size() > 1 ) {
-				throw new MultiParameterException(this.exceptions.toArray(new ParameterException[ 0 ]));
+				throw new MultiParameterException(this.exceptions.toArray(new ParameterException[ this.exceptions.size() ]));
 			}
 			else {
 				throw this.exceptions.get(0);

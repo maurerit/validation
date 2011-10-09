@@ -30,6 +30,8 @@ public class ParameterException extends IllegalArgumentException
 
 	public ParameterException ( String parameterName, Object parameter, String message ) {
 		super("Parameter: " + parameterName + " with value: " + parameter + " failed a check with message: " + message);
+		this.parameterName = parameterName;
+		this.parameter = parameter;
 	}
 
 	public String getParameterName ( ) {
