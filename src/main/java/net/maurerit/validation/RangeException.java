@@ -21,7 +21,11 @@ package net.maurerit.validation;
  *
  * @author Matthew L. Maurer maurer.it@gmail.com
  */
-public class RangeException extends RuntimeException
+public class RangeException extends ParameterException
 {
 	private static final long	serialVersionUID	= 8859200447567002896L;
+	
+	public RangeException(String parameterName, Object parameter, String message) {
+		super(parameterName, parameter, message);
+	}
 }

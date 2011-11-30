@@ -246,7 +246,7 @@ public final class Validation
 	 * @return
 	 */
 	public Validation notEmpty ( java.lang.String aString, String parameterName ) {
-		if ( aString != null && !aString.isEmpty() ) {
+		if ( aString == null || aString.isEmpty() ) {
 			return failedCheck(parameterName, aString, parameterName + " can not be null or empty!");
 		}
 		else {
