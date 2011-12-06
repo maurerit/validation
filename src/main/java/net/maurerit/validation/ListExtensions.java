@@ -23,7 +23,7 @@ import java.util.List;
  * Add's {@link Validation validation} methods for {@link List} objects.
  * To use these add the following to your class:
  * 
- * <pre>@ExtensionMethod({Validation.class, ValidationExtensions.class})</pre>
+ * <pre>@ExtensionMethod({Validation.class, ListExtensions.class})</pre>
  * 
  * @author Matthew L. Maurer maurer.it@gmail.com
  */
