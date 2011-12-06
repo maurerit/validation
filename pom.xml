@@ -18,7 +18,7 @@
 			<groupId>com.github.peichhorn</groupId>
 			<artifactId>lombok-pg</artifactId>
 			<version>0.10.5</version>
-			<scope>provided</scope>
+			<scope>optional</scope>
 		</dependency>
 	</dependencies>
 	

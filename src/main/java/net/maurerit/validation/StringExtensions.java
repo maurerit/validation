@@ -19,6 +19,8 @@ package net.maurerit.validation;
 import java.util.Arrays;
 
 /**
+ * <b>NOTE: TO USE THESE EXTENSIONS YOU WILL NEED <a href="http://peichhorn.github.com/lombok-pg/">lombok-pg</a> version 0.10.5+</b>
+ * <br/><br/>
  * Add's {@link Validation validation} methods for {@link String} objects.
  * To use these add the following to your class:
  * 
