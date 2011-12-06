@@ -28,9 +28,11 @@ import java.util.Arrays;
  * 
  * @author Matthew L. Maurer maurer.it@gmail.com
  */
-public class StringExtensions {
+public final class StringExtensions {
 	
 	private static final String MATCHES_ONEOF_FAIL_MSG = " did not match one of {1}";
+	
+	private StringExtensions ( ) { }
 	
 	/**
 	 * Checks if a string matches one of the passed in strings.

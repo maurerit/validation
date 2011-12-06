@@ -33,6 +33,8 @@ public final class ListExtensions {
 
 	private static final String CONTAINS_CHKFAIL_MSG = "{0} did not contain one of {1}";
 	
+	private ListExtensions ( ) { }
+	
 	/**
 	 * Checks a {@link List} to see if it contains something that is in the varargs array.
 	 * 
