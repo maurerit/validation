@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.maurerit</groupId>
 	<artifactId>validation</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-lombok-pg</version>
 
 	<dependencies>
 		<dependency>
@@ -11,6 +11,13 @@
 			<artifactId>junit</artifactId>
 			<version>4.8</version>
 			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.peichhorn</groupId>
+			<artifactId>lombok-pg</artifactId>
+			<version>0.10.5</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	

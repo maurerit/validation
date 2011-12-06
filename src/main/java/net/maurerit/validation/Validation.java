@@ -390,7 +390,7 @@ public final class Validation
 	 * @param failedMessage
 	 * @return
 	 */
-	private Validation failedCheck ( String parameterName, Object parameter, String failedMessage ) {
+	public Validation failedCheck ( String parameterName, Object parameter, String failedMessage ) {
 		Validation validation = this;
 		
 		if ( this.exceptions.isEmpty() ) {
