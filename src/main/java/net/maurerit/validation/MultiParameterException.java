@@ -54,12 +54,4 @@ public class MultiParameterException extends IllegalArgumentException
 	public String getMessage ( ) {
 		return message;
 	}
-	
-	/**
-	 * XXX: How would we localize this?  Don't think we need to worry about it honestly.  
-	 */
-	@Override
-	public String getLocalizedMessage ( ) {
-		return message;
-	}
 }

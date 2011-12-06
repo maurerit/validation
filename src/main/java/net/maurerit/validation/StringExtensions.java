@@ -30,7 +30,7 @@ import java.util.Arrays;
  */
 public final class StringExtensions {
 	
-	private static final String MATCHES_ONEOF_FAIL_MSG = " did not match one of {1}";
+	private static final String MATCHES_ONEOF_FAIL_MSG = "Did not match one of {1}";
 	
 	private StringExtensions ( ) { }
 	

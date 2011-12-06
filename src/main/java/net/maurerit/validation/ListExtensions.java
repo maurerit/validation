@@ -31,7 +31,7 @@ import java.util.List;
  */
 public final class ListExtensions {
 
-	private static final String CONTAINS_CHKFAIL_MSG = "{0} did not contain one of {1}";
+	private static final String CONTAINS_ONEOF_FAIL_MSG = "{0} did not contain one of {1}";
 	
 	private ListExtensions ( ) { }
 	
@@ -57,7 +57,7 @@ public final class ListExtensions {
 		}
 		
 		if ( !foundAMatch ) {
-			String message = CONTAINS_CHKFAIL_MSG.replace("{0}", list.toString()).replace("{1}", Arrays.toString(shouldContain));
+			String message = CONTAINS_ONEOF_FAIL_MSG.replace("{0}", list.toString()).replace("{1}", Arrays.toString(shouldContain));
 			valToReturn = thisVal.failedCheck(parameterName, list, message);
 		}
 		

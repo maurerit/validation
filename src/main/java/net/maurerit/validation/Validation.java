@@ -246,114 +246,12 @@ public final class Validation
 	 * @return
 	 */
 	public Validation notEmpty ( java.lang.String aString, String parameterName ) {
-		if ( aString == null || aString.isEmpty() ) {
+		if ( aString == null || aString.length() == 0 ) {
 			return failedCheck(parameterName, aString, parameterName + " can not be null or empty!");
 		}
 		else {
 			return this;
 		}
-	}
-	
-	/**
-	 * TODO: Implement Me
-	 * <p/>
-	 * Throws RangeException if 'aRange' is not completely between 'minimum' and 'maximum', inclusive; otherwise, does nothing.
-	 * 
-	 * @param aRange
-	 * @param minimum
-	 * @param maximum
-	 * @param parameterName
-	 * @return
-	 */
-	public Validation rangeWithinBounds(Range aRange, int minimum, int maximum, String parameterName) {
-		return this;
-	}
-	
-	/**
-	 * TODO: Implement Me
-	 * <p/>
-	 * Throws RangeException if 'aRange' is not completely within a sequence that starts at 0 and has a length of 'count'; otherwise does nothing.
-	 * 
-	 * @param aRange
-	 * @param count
-	 * @param parameterName
-	 * @return
-	 */
-	public Validation rangeWithinCount(Range aRange, int count, String parameterName) {
-		return this;
-	}
-	
-	/**
-	 * TODO: Implement Me
-	 * <p/>
-	 * Checks a string and a range which is intended to indicate a substring.
-	 * 
-	 * @param aRange
-	 * @param aString
-	 * @param parameterName
-	 * @return
-	 */
-	public Validation rangeWithinString(Range aRange, java.lang.String aString, String parameterName) {
-		return this;
-	}
-
-	/**
-	 * TODO: Implement Me
-	 * <p/>
-	 * Throws {@link RangeException} if 'anInt' is not within a sequence that starts at 0 and has a length of 'count';
-	 * otherwise does nothing.
-	 * 
-	 * @param anInt
-	 * @param count
-	 * @param parameterName
-	 * @return
-	 */
-	public Validation withinCount ( int anInt, int count, String parameterName ) {
-		return this;
-	}
-
-	/**
-	 * TODO: Implement Me
-	 * <p/>
-	 * Throws RangeException if 'aDouble' is less than 'minimum' or greater than 'maximum'; otherwise, does nothing.
-	 * 
-	 * @param aDouble
-	 * @param minimum
-	 * @param maximum
-	 * @param parameterName
-	 * @return
-	 */
-	public Validation withinRange ( double aDouble, double minimum, double maximum, String parameterName ) {
-		return this;
-	}
-
-	/**
-	 * TODO: Implement Me
-	 * <p/>
-	 * Throws RangeException if 'anInt' is less than 'minimum' or greater than 'maximum'; otherwise, does nothing.
-	 * 
-	 * @param anInt
-	 * @param minimum
-	 * @param maximum
-	 * @param parameterName
-	 * @return
-	 */
-	public Validation withinRange ( int anInt, int minimum, int maximum, String parameterName ) {
-		return this;
-	}
-
-	/**
-	 * TODO: Implement Me
-	 * <p/>
-	 * Throws RangeException if 'anInt' is not within 'aRange'; otherwise, does nothing.
-	 * 
-	 * @param anInt
-	 * @param aRange
-	 * @param parameterName
-	 * @return
-	 */
-	public Validation withinRange ( int anInt, Range aRange, String parameterName ) {
-		return this;
 	}
 	
 	/**

@@ -17,7 +17,7 @@
 package net.maurerit.validation;
 
 /**
- * TODO: Javadoc Me.
+ * Exception thrown if parameters do not meet their criteria during a {@link Validation validation}.
  * 
  * @author Matthew L. Maurer maurer.it@gmail.com
  */
