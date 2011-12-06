@@ -37,7 +37,7 @@ public class ListExtensionsOutsidePackageTest {
 			Validation.begin()
 					  .containsOneOf("strings", strings, "one", "two" )
 					  .check();
-			fail("Should have thrown ParameterException");
+			fail("Should not have found a match.");
 		}
 		catch ( ParameterException e ) { /* Good test case */ }
 	}

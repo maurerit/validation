@@ -16,40 +16,38 @@
  */
 package net.maurerit.validation;
 
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import static org.junit.Assert.fail;
 import lombok.ExtensionMethod;
 
 import org.junit.Test;
 
-@ExtensionMethod({Validation.class, ListExtensions.class})
-public class ListExtensionsTest {
+/**
+ * @author MM66053
+ *
+ */
+@ExtensionMethod({Validation.class, StringExtensions.class})
+public class StringExtensionsTest {
 
 	@Test
-	public void shouldMatchItemsInAList ( ) {
-		List<String> strings = new ArrayList<String>();
-		
-		strings.add("one");
+	public void shouldMatchOneOf ( ) {
+		String test = "thisString";
+		String[] strings = { "notThisString", "thisString" };
 		
 		Validation.begin()
-				  .containsOneOf("strings", strings, "one", "two")
+				  .matchesOneOf("test", test, strings)
 				  .check();
 	}
 
 	@Test
-	public void shouldNotMatchItemsInAList ( ) {
-		List<String> strings = new ArrayList<String>();
-		
-		strings.add("three");
+	public void shouldNotMatchOneOf ( ) {
+		String test = "thisString";
+		String[] strings = { "notThisString1", "notThisString2" };
 		
 		try {
 			Validation.begin()
-					  .containsOneOf("strings", strings, "one", "two" )
+					  .matchesOneOf("test", test, strings)
 					  .check();
-			fail("Should have thrown ParameterException");
+			fail("Should not have found a match.");
 		}
 		catch ( ParameterException e ) { /* Good test case */ }
 	}

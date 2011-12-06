@@ -17,44 +17,43 @@
 package net.maurerit.validation;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
- * Add's {@link Validation validation} methods for {@link List} objects.
+ * Add's {@link Validation validation} methods for {@link String} objects.
  * To use these add the following to your class:
  * 
- * <pre>@ExtensionMethod({Validation.class, ListExtensions.class})</pre>
+ * <pre>@ExtensionMethod({Validation.class, StringExtensions.class})</pre>
  * 
  * @author Matthew L. Maurer maurer.it@gmail.com
  */
-public final class ListExtensions {
-
-	private static final String CONTAINS_CHKFAIL_MSG = "{0} did not contain one of {1}";
+public class StringExtensions {
+	
+	private static final String MATCHES_ONEOF_FAIL_MSG = " did not match one of {1}";
 	
 	/**
-	 * Checks a {@link List} to see if it contains something that is in the varargs array.
+	 * Checks if a string matches one of the passed in strings.
 	 * 
 	 * @param thisVal
 	 * @param parameterName
-	 * @param list
-	 * @param shouldContain
+	 * @param parameter
+	 * @param valsToCheck
 	 * @return
 	 */
-	public static <T> Validation containsOneOf ( Validation thisVal, String parameterName, List<T> list, T... shouldContain ) {
-		boolean foundAMatch = false;
+	public static Validation matchesOneOf ( Validation thisVal, String parameterName, String parameter, String[] valsToCheck ) {
+		boolean matchFound = false;
 		Validation valToReturn = thisVal;
 		
-		for ( Object currentContain : shouldContain ) {
-			if ( list.contains(currentContain) ) {
-				foundAMatch = true;
+		for ( String valToCheck : valsToCheck ) {
+			if ( parameter.equalsIgnoreCase(valToCheck) ) {
+				matchFound = true;
 				//Lets not spend unneeded time in this loop
 				break;
 			}
 		}
 		
-		if ( !foundAMatch ) {
-			String message = CONTAINS_CHKFAIL_MSG.replace("{0}", list.toString()).replace("{1}", Arrays.toString(shouldContain));
-			valToReturn = thisVal.failedCheck(parameterName, list, message);
+		if ( !matchFound ) {
+			String message = MATCHES_ONEOF_FAIL_MSG.replace("{1}", Arrays.toString(valsToCheck));
+			valToReturn = thisVal.failedCheck(parameterName, parameter, message);
 		}
 		
 		return valToReturn;

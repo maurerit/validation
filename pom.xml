@@ -4,6 +4,7 @@
 	<groupId>net.maurerit</groupId>
 	<artifactId>validation</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
+	<name>Parameter Validation API</name>
 
 	<dependencies>
 		<dependency>
