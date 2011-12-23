@@ -3,8 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.maurerit</groupId>
 	<artifactId>validation</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Parameter Validation API</name>
+
+	<organization>
+		<name>Maurer IT</name>
+		<url>maurer-it.net</url>
+	</organization>
+
+	<scm>
+		<url>scm:git:[fetch=]https://github.com/maurerit/validation.git</url>
+		<connection>scm:git:[fetch=]https://github.com/maurerit/validation.git</connection>
+		<developerConnection>scm:git:[fetch=]https://github.com:maurerit/validation.git[push=]origin</developerConnection>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -35,4 +46,18 @@
 			</plugin>
 		</plugins>
 	</build>
+	<issueManagement>
+		<system>Git Hub</system>
+		<url>https://github.com/maurerit/validation/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://jenkins.maurer-it.net/job/validation/</url>
+	</ciManagement>
+	<inceptionYear>2011</inceptionYear>
+	<url>https://github.com/maurerit/validation</url>
+	<description>An easy to use Method Parameter Validation API using a fluent style approach for easily validating multiple parameters with as little code as possible.
+
+Think of the following:
+Validation.begin().notNull(parameter,&quot;parameter name&quot;).notEmpty(string,&quot;string name&quot;).check().  This library relies on lombok-pg to easily extend the Validation class with more useful methods without increasing the size of the code within Validation.  This approach offers the ability for users of this library to further enhance the Validation class by implementing their own validation methods using method extensions</description>
 </project>
