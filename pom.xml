@@ -1,92 +1,101 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.maurerit</groupId>
-	<artifactId>validation</artifactId>
-	<version>1.0.1</version>
-	<name>Parameter Validation API</name>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.maurerit</groupId>
+    <artifactId>validation</artifactId>
+    <version>1.0.1</version>
+    <name>Parameter Validation API</name>
 
-	<issueManagement>
-		<system>Git Hub</system>
-		<url>https://github.com/maurerit/validation/issues</url>
-	</issueManagement>
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://jenkins.maurer-it.net/job/validation/</url>
-	</ciManagement>
-	<inceptionYear>2011</inceptionYear>
-	<url>https://github.com/maurerit/validation</url>
-	<description>An easy to use Method Parameter Validation API using a fluent style approach for easily validating multiple parameters with as little code as possible.
+    <issueManagement>
+        <system>Git Hub</system>
+        <url>https://github.com/maurerit/validation/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>http://jenkins.maurer-it.net/job/validation/</url>
+    </ciManagement>
+    <inceptionYear>2011</inceptionYear>
+    <url>https://github.com/maurerit/validation</url>
+    <description>An easy to use Method Parameter Validation API using a fluent style approach for easily validating
+        multiple parameters with as little code as possible.
 
-Think of the following:
-Validation.begin().notNull(parameter,&quot;parameter name&quot;).notEmpty(string,&quot;string name&quot;).check().  This library relies on lombok-pg to easily extend the Validation class with more useful methods without increasing the size of the code within Validation.  This approach offers the ability for users of this library to further enhance the Validation class by implementing their own validation methods using method extensions
-	</description>
+        Think of the following:
+        Validation.begin().notNull(parameter,&quot;parameter name&quot;).notEmpty(string,&quot;string name&quot;).check().
+        This library relies on lombok-pg to easily extend the Validation class with more useful methods without
+        increasing the size of the code within Validation. This approach offers the ability for users of this library to
+        further enhance the Validation class by implementing their own validation methods using method extensions
+    </description>
 
-	<organization>
-		<name>Maurer IT</name>
-		<url>maurer-it.net</url>
-	</organization>
+    <organization>
+        <name>Maurer IT</name>
+        <url>maurer-it.net</url>
+    </organization>
 
-	<scm>
-		<url>scm:git:[fetch=]https://github.com/maurerit/validation.git</url>
-		<connection>scm:git:[fetch=]https://github.com/maurerit/validation.git</connection>
-		<developerConnection>scm:git:[fetch=]https://github.com:maurerit/validation.git[push=]origin</developerConnection>
-	</scm>
+    <scm>
+        <url>scm:git:[fetch=]https://github.com/maurerit/validation.git</url>
+        <connection>scm:git:[fetch=]https://github.com/maurerit/validation.git</connection>
+        <developerConnection>scm:git:[fetch=]https://github.com:maurerit/validation.git[push=]origin
+        </developerConnection>
+    </scm>
 
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-plugin</artifactId>
-				<version>1.6</version>
-				<configuration>
-					<connectionType>developerConnection</connectionType>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<check/>
-					<formats>
-						<format>html</format>
-						<format>xml</format>
-					</formats>
-					<aggregate>true</aggregate>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.6.201602180812</version>
-			</plugin>
-			<plugin>
-				<groupId>org.eluder.coveralls</groupId>
-				<artifactId>coveralls-maven-plugin</artifactId>
-				<version>4.2.0</version>
-				<configuration>
-					<repoToken>lVu6ejRaAnbnnn6aiuUKYehTFSYm1Upf7</repoToken>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.6</version>
+                <configuration>
+                    <connectionType>developerConnection</connectionType>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <check/>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                    <aggregate>true</aggregate>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.6.201602180812</version>
+            </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>4.2.0</version>
+                <configuration>
+                    <repoToken>lVu6ejRaAnbnnn6aiuUKYehTFSYm1Upf7</repoToken>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
