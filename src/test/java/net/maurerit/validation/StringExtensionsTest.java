@@ -16,16 +16,14 @@
  */
 package net.maurerit.validation;
 
-import static org.junit.Assert.fail;
-import lombok.ExtensionMethod;
-
 import org.junit.Test;
 
+import static org.junit.Assert.fail;
+
 /**
- * @author MM66053
+ * @author maurerit
  *
  */
-@ExtensionMethod({Validation.class, StringExtensions.class})
 public class StringExtensionsTest {
 
 	@Test

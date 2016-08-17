@@ -16,16 +16,13 @@
  */
 package net.maurerit.validation;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.ExtensionMethod;
+import static org.junit.Assert.fail;
 
-import org.junit.Test;
-
-@ExtensionMethod({Validation.class, ListExtensions.class})
 public class ListExtensionsTest {
 
 	@Test
